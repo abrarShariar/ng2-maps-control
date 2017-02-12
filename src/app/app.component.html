@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+
+<div class="container">
+	<h1>
+		{{title}}
+	</h1>
+	<br>
+	<!-- navigation panel -->
+	<div class="col-md-12">
+		<ul class="nav nav-tabs">
+			<li role="presentation"><a [routerLink]="['/marker']">Marker</a></li>
+			<li role="presentation"><a href="#">Cluster</a></li>
+			<li role="presentation"><a href="#">Route and Waypoints</a></li>
+		</ul>
+	</div>
+
+	<!-- for displaying components -->
+	<div class="col-md-12" *ngIf="home">
+		<ng2-map></ng2-map>
+	</div> 
+	<div class="col-md-12">
+		<router-outlet></router-outlet>
+	</div>
+</div>

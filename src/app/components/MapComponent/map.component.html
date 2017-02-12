@@ -1,0 +1,25 @@
+<!-- default map component -->
+<div class="container">
+	<br><br>
+	<div class="col-md-12">
+		<label>Latitute: </label>
+		<input type="number" step="0.000001" [(ngModel)]="lat">
+		&nbsp;
+		<label>Longitude: </label>
+		<input type="number" step="0.000001" [(ngModel)]="lng">
+		&nbsp;
+		<label>zoom: </label>
+		<input type="number" step="0.000001" [(ngModel)]="zoom">
+	</div>
+	<br><br>
+
+	<div class="col-md-12">
+		<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClicked()">
+		</sebm-google-map>
+	</div>
+</div>
+
+
+
+
+
